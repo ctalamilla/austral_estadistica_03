@@ -376,6 +376,28 @@ p=pnorm(493,mean = 500,sd=sd)
 #P(Y<=6)
 pbinom(6,size = 15,p=p)
 
+# Ejercicio 10
+# Una fábrica de cartuchos de tinta para impresora comercializa su producción en
+# cajas que contienen 12 unidades. En base a información histórica de la empresa,
+# se sabe que el 7% resultan defectuosos y que la ganancia obtenida por cada caja
+# se encuentra en función de la cantidad de unidades defectuosas según el
+# siguiente esquema,
+
+# - Si la caja no contiene ningún cartucho defectuoso, la ganancia es de $2,50.
+# - Si la caja contiene uno o dos cartuchos defectuosos, la ganancia es de $1,80.
+# - Si la caja contiene tres o cuatro cartuchos defectuosos, la ganancia es de
+# $1,20.
+#- Si la caja contiene más de 4 cartuchos defectuosos es devuelta y origina una
+# pérdida de $2,40.
+
+# a) Calcular la ganancia que se espera obtener por la venta de 200 cajas.
+
+# b) ¿Cuál es la probabilidad de que una caja produzca como mínimo $1,50 de
+# ganancia?
+
+#   c) Se vendieron 4 cajas, ¿Cuál es la probabilidad de obtener una ganancia total
+# de $10 por dicha venta?
+
 
 
 
