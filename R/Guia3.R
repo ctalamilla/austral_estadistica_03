@@ -383,21 +383,44 @@ pbinom(6,size = 15,p=p)
 # se encuentra en función de la cantidad de unidades defectuosas según el
 # siguiente esquema,
 
+p = 0.07
+n = 12
+
+library(dplyr)
 # - Si la caja no contiene ningún cartucho defectuoso, la ganancia es de $2,50.
+a = dbinom(0, n, p) %>% sum()
+
 # - Si la caja contiene uno o dos cartuchos defectuosos, la ganancia es de $1,80.
+b = dbinom(1:2, n, p) %>% sum()
+
 # - Si la caja contiene tres o cuatro cartuchos defectuosos, la ganancia es de
 # $1,20.
+c = dbinom(3:4, n, p) %>% sum()
+
 #- Si la caja contiene más de 4 cartuchos defectuosos es devuelta y origina una
 # pérdida de $2,40.
+d = dbinom(5:12, n, p) %>% sum()#genera perdida
 
 # a) Calcular la ganancia que se espera obtener por la venta de 200 cajas.
 
+probs = c(a, b, c, d)
+criterios = c(2.5,1.8,1.2,-2.4)
+
+respuesta = (probs * criterios) %>% sum() * 200
+
 # b) ¿Cuál es la probabilidad de que una caja produzca como mínimo $1,50 de
 # ganancia?
+
 
 #   c) Se vendieron 4 cajas, ¿Cuál es la probabilidad de obtener una ganancia total
 # de $10 por dicha venta?
 
 
+
+
+#P(Y>1.5) = P(X=1 U X=2) + P(X=0)
+p0+p12
+#P(Z=$10) => P(X=0)*P(X=0)*P(X=0)*P(X=0)
+p0^4
 
 
